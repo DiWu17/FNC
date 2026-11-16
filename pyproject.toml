@@ -28,6 +28,7 @@ spatial = ["pyarrow>=15,<22", "shapely>=2.0,<3"]
 browser = ["playwright>=1.55,<2"]
 
 [project.scripts]
+fnc = "clickagent.cli:fnc_main"
 clickagent = "clickagent.cli:main"
 
 [tool.setuptools.packages.find]

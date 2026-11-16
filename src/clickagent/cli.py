@@ -94,8 +94,8 @@ def doctor(model: Path) -> dict:
     return result
 
 
-def main(argv: list[str] | None = None) -> None:
-    parser = argparse.ArgumentParser(prog="clickagent", description="Frozen Qwen3-VL intent and visual-state gates")
+def main(argv: list[str] | None = None, *, prog: str = "clickagent") -> None:
+    parser = argparse.ArgumentParser(prog=prog, description="FNC GUI grounding research utilities")
     parser.add_argument("--verbose", action="store_true")
     commands = parser.add_subparsers(dest="command", required=True)
 
@@ -204,6 +204,11 @@ def main(argv: list[str] | None = None) -> None:
                          for r in summary["runs"]]})
     elif args.command == "doctor":
         _print(doctor(args.model))
+
+
+def fnc_main(argv: list[str] | None = None) -> None:
+    """Public FNC entry point, sharing all commands with the legacy alias."""
+    main(argv, prog="fnc")
 
 
 if __name__ == "__main__":

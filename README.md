@@ -38,7 +38,7 @@ Lightweight readout -> Click location
 | Training, inference, and evaluation scripts | [scripts/](scripts/) |
 | Tests | [tests/](tests/) |
 
-The Python package and command-line entry point use the name `clickagent`.
+The command-line entry point is `fnc`. The Python package remains `clickagent`, and the previous command name is retained as a compatibility alias.
 
 ## Installation
 
@@ -63,7 +63,7 @@ models/Qwen3-VL-8B-Instruct/
 Check the environment and model files with:
 
 ```bash
-clickagent doctor --model models/Qwen3-VL-8B-Instruct
+fnc doctor --model models/Qwen3-VL-8B-Instruct
 ```
 
 End-to-end FNC inference also requires the trained candidate proposer and readout checkpoints. Model weights, datasets, and generated feature caches are managed separately from this source repository. Experiment scripts specify their required input files and output locations.
@@ -74,5 +74,5 @@ Install the development dependencies and inspect the command-line utilities:
 
 ```bash
 python -m pip install -e ".[dev]"
-clickagent --help
+fnc --help
 ```
