@@ -1,0 +1,129 @@
+# Local datasets, model downloads, experiment artifacts and migration bundles.
+# Root anchoring keeps similarly named directories in source/examples available.
+/data/
+/models/
+/runs/
+/transfer/
+/reports/
+/checkpoints/
+/outputs/
+/.bootstrap/
+/.cache/
+/.tmp/
+
+# Local research notes, manuscript drafts, and coordination records.
+# Public documentation is maintained in the root README.
+/docs/
+/research/
+/paper/
+/CURRENT_RESEARCH.json
+/HANDOFF.md
+
+# Downloaded third-party repositories and installed dependency overlays.
+# Keep revision manifests/setup documentation outside these ignored directories.
+/third_party/env_v17/
+/third_party/GUI-AIMA/
+/third_party/MVP/
+/third_party/TAG/
+
+# Python environments, bytecode, build products and tool caches.
+.venv/
+/venv/
+/env/
+/.conda/
+__pycache__/
+*.py[cod]
+*.pyd
+*.so
+*.dylib
+/build/
+/dist/
+.eggs/
+*.egg
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.pytype/
+.tox/
+.nox/
+.ipynb_checkpoints/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+
+# Training logs and model binaries accidentally saved outside runs/models.
+wandb/
+lightning_logs/
+mlruns/
+tensorboard/
+events.out.tfevents.*
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.gguf
+*.log
+*.incomplete
+*.part
+
+# Download/transfer archives; keep unpacked source and curated figure assets.
+*.zip
+*.7z
+*.rar
+*.tar
+*.tar.*
+*.tgz
+*.whl
+
+# LaTeX build products. Do not blanket-ignore PDFs: figure PDFs are source assets.
+/paper/**/build/
+/paper/**/output/
+/paper/**/PDF/
+*.aux
+*.bbl
+*.blg
+*.brf
+*.bcf
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.run.xml
+*.toc
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+*.xdv
+*.dvi
+/paper/**/*.out
+
+# Machine-local settings and credentials. Example environment files are kept.
+.env
+.env.*
+!.env.example
+!.env.template
+*.pem
+*.key
+*.p12
+*.pfx
+/.aws/
+/.codex/
+.idea/
+.vscode/
+/docs/
+
+# Editor backups and operating-system metadata.
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/

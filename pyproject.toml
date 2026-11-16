@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "clickagent-experiments"
+version = "0.1.0"
+description = "Frozen Qwen3-VL intent gates from attention and hidden states"
+requires-python = ">=3.10,<3.13"
+dependencies = [
+  "numpy>=1.26,<3",
+  "Pillow>=10.4",
+  "scikit-learn>=1.5,<2",
+  "joblib>=1.4",
+]
+
+[project.optional-dependencies]
+model = [
+  "torch>=2.6,<2.8",
+  "transformers==4.57.1",
+  "accelerate>=1.1,<2",
+  "safetensors>=0.4.5",
+  "modelscope>=1.30,<2",
+]
+dev = ["pytest>=8,<10"]
+analysis = ["matplotlib>=3.9,<4"]
+spatial = ["pyarrow>=15,<22", "shapely>=2.0,<3"]
+browser = ["playwright>=1.55,<2"]
+
+[project.scripts]
+clickagent = "clickagent.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+

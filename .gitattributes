@@ -1,0 +1,3 @@
+# Experiment protocols hash source/configuration bytes, including line endings.
+# Preserve existing LF/CRLF bytes across clones and platforms.
+* -text
