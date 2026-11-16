@@ -19,6 +19,9 @@
 /CURRENT_RESEARCH.json
 /HANDOFF.md
 
+# Local automated tests are kept outside the public release.
+/tests/
+
 # Downloaded third-party repositories and installed dependency overlays.
 # Keep revision manifests/setup documentation outside these ignored directories.
 /third_party/env_v17/

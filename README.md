@@ -36,7 +36,6 @@ Lightweight readout -> Click location
 | Multi-region candidate construction | [multiregion_proposals.py](src/clickagent/multiregion_proposals.py) |
 | Candidate evidence aggregation and scoring | [evidence_retention.py](src/clickagent/evidence_retention.py) |
 | Training, inference, and evaluation scripts | [scripts/](scripts/) |
-| Tests | [tests/](tests/) |
 
 The command-line entry point is `fnc`. The Python package remains `clickagent`, and the previous command name is retained as a compatibility alias.
 
@@ -68,11 +67,10 @@ fnc doctor --model models/Qwen3-VL-8B-Instruct
 
 End-to-end FNC inference also requires the trained candidate proposer and readout checkpoints. Model weights, datasets, and generated feature caches are managed separately from this source repository. Experiment scripts specify their required input files and output locations.
 
-## Development
+## Command-Line Utilities
 
-Install the development dependencies and inspect the command-line utilities:
+Inspect the available commands:
 
 ```bash
-python -m pip install -e ".[dev]"
 fnc --help
 ```
